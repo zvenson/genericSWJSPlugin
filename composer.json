@@ -1,0 +1,36 @@
+{
+    "name": "designburgs/javascript-plugin",
+    "description": "empty javascript plugin",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "extra": {
+        "shopware-plugin-class": "DesignBurgsJavaScript\\DesignBurgsJavaScript",
+        "label": {
+            "en-GB": "DesignBurgs JavaScript Plugin",
+            "de-DE": "DesignBurgs JavaScript Plugin"
+        }
+    },
+    "require": {
+        "shopware/core": "*",
+        "shopware/storefront": "*",
+        "shopware/administration": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DesignBurgsJavaScript\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "Shopware\\Core\\Framework\\Plugin\\Composer\\PluginComposerAutoloadDump::postUpdate",
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate"
+        ],
+        "post-install-cmd": [
+            "Shopware\\Core\\Framework\\Plugin\\Composer\\PluginComposerAutoloadDump::postUpdate",
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate"
+        ]
+    }
+}
+
