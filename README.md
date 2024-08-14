@@ -1,4 +1,5 @@
 # genericSWJSPlugin
+Shopware 6
 You can add your JS Code to this file: 
 /src/Resources/app/storefront/src/design-burgs-plugin/design-burgs-plugin.js
 
